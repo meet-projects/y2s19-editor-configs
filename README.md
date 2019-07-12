@@ -25,14 +25,28 @@ Assuming [node](https://nodejs.org/en/download/) and [npm](https://www.npmjs.com
   },
   "[css]": {
     "editor.formatOnSave": true
-  }
+  },
+  "prettier.singleQuote": true
+}
+```
+
+### Atom
+ 1. Press `Ctrl/⌘ + Shift + P` to open the command palette, search for "Package Control: Install Packge", and press enter to search for package. Search for the "JsPrettier" plugin, and install it. If it doesn't appear in the search, it is likely already installed.
+2. Press `Ctrl/⌘ + Shift + P` to open the command palette, search for "Preferences: JsPrettier Settings - User", and press enter. Replace (or merge, if settings already exist) the following JSON into the `JsPrettier.sublime-settings` file. Then, save the file.
+```json
+{
+	"auto_format_on_save": true,
+	"auto_format_on_save_excludes": [
+	    "*/node_modules/*",
+	],
+	"prettier_options": {
+		"singleQuote": true
+	}
 }
 ```
 
 TODO:
 
 Atom
-
-Sublime3
 
 WebStorm/Pycharm
